@@ -1,64 +1,30 @@
 var express = require('express');
 var router = express.Router();
-var pool = require('../modules/pool');
+var ForRent = require('../models/forRent.schema');
 
-// router.get('/', function (req, res) {
-//     pool.connect(function (errorConnectingToDatabase, client, done) {
-//         if (errorConnectingToDatabase) {
-//             console.log('error', errorConnectingToDatabase);
+// var Movie = require('../models/movie.schema');
+
+// router.get('/', function(req, res){
+//     // a get request for all games
+//     Movie.find({}, function(errorMakingDatabaseQuery, data){
+//         if (errorMakingDatabaseQuery) {
+//             console.log('error with game find', errorMakingDatabaseQuery);
 //             res.sendStatus(500);
 //         } else {
-//             client.query('SELECT * FROM power ORDER BY id;', function (errorMakingDatabaseQuery, result) {
-//                 done();
-//                 if (errorMakingDatabaseQuery) {
-//                     console.log('error', errorMakingDatabaseQuery);
-//                     res.sendStatus(500);
-//                 } else {
-//                     res.send(result.rows);
-//                 }
-//             });
+//             res.send(data);
 //         }
 //     });
 // });
 
-// router.post('/', function (req, res) {
-//     var newPower = req.body;
-//     pool.connect(function (errorConnectingToDatabase, client, done) {
-//         if (errorConnectingToDatabase) {
-//             console.log('error', errorConnectingToDatabase);
+// router.post('/', function(req, res){
+//     // a get request for all games
+//     var addMovie = new Movie(req.body);
+//     addMovie.save(function(errorMakingDatabaseQuery, data){
+//         if (errorMakingDatabaseQuery) {
+//             console.log('error with game find', errorMakingDatabaseQuery);
 //             res.sendStatus(500);
 //         } else {
-//             client.query(`INSERT INTO power (name, description) VALUES ($1, $2);`, [newPower.name, newPower.description], function (errorMakingDatabaseQuery, result) {
-//                 done();
-//                 if (errorMakingDatabaseQuery) {
-//                     console.log('error', errorMakingDatabaseQuery);
-//                     res.sendStatus(500);
-//                 } else {
-//                     res.sendStatus(201);
-//                 }
-//             });
-//         }
-//     });
-// });
-
-// router.put('/', function (req, res) {
-//     var power = req.query;
-//     pool.connect(function (errorConnectingToDatabase, client, done) {
-//         if (errorConnectingToDatabase) {
-//             console.log('error', errorConnectingToDatabase);
-//             res.sendStatus(500);
-//         } else {
-//             client.query(`UPDATE power 
-//                         SET name=$1, description=$2 
-//                         WHERE id=$3;`, [power.name, power.description, power.id], function (errorMakingDatabaseQuery, result) {
-//                 done();
-//                 if (errorMakingDatabaseQuery) {
-//                     console.log('error', errorMakingDatabaseQuery);
-//                     res.sendStatus(500);
-//                 } else {
-//                     res.sendStatus(204);
-//                 }
-//             });
+//             res.sendStatus(200);
 //         }
 //     });
 // });
