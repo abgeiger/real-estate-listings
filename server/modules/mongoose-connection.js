@@ -2,7 +2,7 @@ function connect() {
     var mongoose = require('mongoose');
     
     /** -------- MONGOOSE CONNECTION --------**/
-    var databaseUrl = 'mongodb://localhost:27017/game_chest';
+    var databaseUrl = 'mongodb://localhost:27017/realestate';
     mongoose.connect(databaseUrl);
     
     mongoose.connection.on('connected', function() {
