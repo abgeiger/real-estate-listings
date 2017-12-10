@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 // create new schema
 // this will enforce our obect properties
 var forSaleSchema = new Schema({
-    rent: {type: Number},
+    cost: {type: Number},
     sqft: {type: Number},
     city: {type: String},
 });
