@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
-var ForRent = require('../models/forRent.schema.js');
+var Rental = require('../models/rental.schema.js');
 
 // var Movie = require('../models/movie.schema');
 
 router.get('/', function(req, res){
     // a get request for all rentals
-    ForRent.find({}, function(errorMakingDatabaseQuery, data){
+    Rental.find({}, function(errorMakingDatabaseQuery, data){
         if (errorMakingDatabaseQuery) {
             console.log('error with game find', errorMakingDatabaseQuery);
             res.sendStatus(500);

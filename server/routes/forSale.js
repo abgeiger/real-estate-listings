@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var ForSale = require('../models/forSale.schema');
+var Listing = require('../models/listing.schema');
 
 // var Movie = require('../models/movie.schema');
 

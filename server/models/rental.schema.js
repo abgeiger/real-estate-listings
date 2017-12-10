@@ -3,10 +3,10 @@ var Schema = mongoose.Schema;
 
 // create new schema
 // this will enforce our obect properties
-var forSaleSchema = new Schema({
-    cost: {type: Number},
+var rentalSchema = new Schema({
+    rent: {type: Number},
     sqft: {type: Number},
     city: {type: String},
 });
 
-module.exports = mongoose.model('ForSale', forSaleSchema);
+module.exports = mongoose.model('Rental', rentalSchema);
