@@ -4,17 +4,17 @@ var ForRent = require('../models/forRent.schema');
 
 // var Movie = require('../models/movie.schema');
 
-// router.get('/', function(req, res){
-//     // a get request for all games
-//     Movie.find({}, function(errorMakingDatabaseQuery, data){
-//         if (errorMakingDatabaseQuery) {
-//             console.log('error with game find', errorMakingDatabaseQuery);
-//             res.sendStatus(500);
-//         } else {
-//             res.send(data);
-//         }
-//     });
-// });
+router.get('/', function(req, res){
+    // a get request for all games
+    ForRent.find({}, function(errorMakingDatabaseQuery, data){
+        if (errorMakingDatabaseQuery) {
+            console.log('error with game find', errorMakingDatabaseQuery);
+            res.sendStatus(500);
+        } else {
+            res.send(data);
+        }
+    });
+});
 
 // router.post('/', function(req, res){
 //     // a get request for all games
