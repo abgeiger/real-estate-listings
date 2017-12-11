@@ -2,10 +2,12 @@ app.service('ForRentService', ['$http', function($http) {
     var self = this;
 
     self.rentals = { list: [] };
-    // self.newPower = {
-    //     name: '',
-    //     description: ''
-    // }
+
+    self.newRental = {
+        rent: '',
+        sqft: '',
+        city: ''
+    }
 
     self.getRentals = function() {
         $http({
@@ -18,18 +20,19 @@ app.service('ForRentService', ['$http', function($http) {
         });
     };
 
-    // self.addNewPower = function(newPower) {
-    //     $http({
-    //         method: 'POST',
-    //         url: '/power',
-    //         data: newPower
-    //     }).then(function(response) {
-    //         console.log('response', response);
-    //         self.getPowers();
-    //         self.newPower.name = '';
-    //         self.newPower.description = '';
-    //     });
-    // };
+    self.addNewRental = function(newRental) {
+        $http({
+            method: 'POST',
+            url: '/forRent',
+            data: newRental
+        }).then(function(response) {
+            console.log('response', response);
+            self.getRentals();
+            self.newRental.rent = '';
+            self.newRental.sqft = '';
+            self.newRental.city = '';
+        });
+    };
 
     // self.savePower = function(power) {
     //     $http({
