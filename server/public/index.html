@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,13 +18,25 @@
     <script src="scripts/controllers/forSale.controller.js"></script>
 
     <!-- Services -->
-    <script src="scripts/services/forRent.service.js"></script>    
-    <script src="scripts/services/forSale.service.js"></script>    
+    <script src="scripts/services/forRent.service.js"></script>
+    <script src="scripts/services/forSale.service.js"></script>
 </head>
+
 <body ng-app="RealEstateApp">
-    <a href="#!">Home</a>
-    <a href="#!forRent">For Rent</a>
-    <a href="#!forSale">For Sale</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-2 menu-item">
+                <a href="#!">Home</a>
+            </div>
+            <div class="col-xs-2 menu-item">
+                <a href="#!forRent">For Rent</a>
+            </div>
+            <div class="col-xs-2 menu-item">
+                <a href="#!forSale">For Sale</a>
+            </div>
+        </div>
+    </div>
     <ng-view></ng-view>
 </body>
+
 </html>

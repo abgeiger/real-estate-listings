@@ -1,0 +1,10 @@
+.menu-item {
+    height: 20px;
+    border-radius: 7px;
+    background-color: skyblue;
+    margin: 5px;
+}
+
+a {
+    color: white;
+}
