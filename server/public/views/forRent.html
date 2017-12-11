@@ -5,13 +5,34 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-sm-6 input-item">
+            <h3>Add a Property</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 input-item">
+            <input type="text" placeholder="Rent" ng-model="vm.newRental.rent">
+        </div>
+        <div class="col-sm-3 input-item">
+            <input type="text" placeholder="Square Footage" ng-model="vm.newRental.sqft">
+        </div>
+        <div class="col-sm-3 input-item">
+            <input type="text" placeholder="City" ng-model="vm.newRental.city">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 input-item">
+            <button class="btn btn-primary" ng-click="vm.addNewRental(vm.newRental)">Submit</button>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-xs-12">
             <table class="table">
                 <thead>
                     <tr>
                         <th>Rent</th>
                         <th>Square Footage</th>
-                        <th>City</th>          
+                        <th>City</th>
                     </tr>
                 </thead>
                 <tbody>
