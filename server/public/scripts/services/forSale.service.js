@@ -1,22 +1,22 @@
 app.service('ForSaleService', ['$http', function($http) {
     var self = this;
 
-    // self.powers = { list: [] };
+    self.listings = { list: [] };
     // self.newPower = {
     //     name: '',
     //     description: ''
     // }
 
-    // self.getPowers = function() {
-    //     $http({
-    //         method: 'GET',
-    //         url: '/power'
-    //     }).then(function(response) {
-    //         console.log('response', response);
+    self.getListings = function() {
+        $http({
+            method: 'GET',
+            url: '/forSale'
+        }).then(function(response) {
+            console.log('response', response);
             
-    //         self.powers.list = response.data;
-    //     });
-    // };
+            self.listings.list = response.data;
+        });
+    };
 
     // self.addNewPower = function(newPower) {
     //     $http({

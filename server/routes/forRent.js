@@ -8,7 +8,7 @@ router.get('/', function(req, res){
     // a get request for all rentals
     Rental.find({}, function(errorMakingDatabaseQuery, data){
         if (errorMakingDatabaseQuery) {
-            console.log('error with game find', errorMakingDatabaseQuery);
+            console.log('error with find', errorMakingDatabaseQuery);
             res.sendStatus(500);
         } else {
             res.send(data);

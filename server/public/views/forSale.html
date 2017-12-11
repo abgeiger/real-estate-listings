@@ -1,1 +1,33 @@
-<h1>For Sale</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-8 text-center">
+            <h1>For Sale</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Cost</th>
+                        <th>Square Footage</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="listing in vm.listings.list">
+                        <td>
+                            {{listing.cost}}
+                        </td>
+                        <td>
+                            {{listing.sqft}}
+                        </td>
+                        <td>
+                            {{listing.city}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
