@@ -16,17 +16,17 @@ router.get('/', function(req, res){
     });
 });
 
-// router.post('/', function(req, res){
-//     // a get request for all games
-//     var addMovie = new Movie(req.body);
-//     addMovie.save(function(errorMakingDatabaseQuery, data){
-//         if (errorMakingDatabaseQuery) {
-//             console.log('error with game find', errorMakingDatabaseQuery);
-//             res.sendStatus(500);
-//         } else {
-//             res.sendStatus(200);
-//         }
-//     });
-// });
+// post new listing
+router.post('/', function(req, res){
+    var addListing = new Listing(req.body);
+    addListing.save(function(errorMakingDatabaseQuery, data){
+        if (errorMakingDatabaseQuery) {
+            console.log('error with find', errorMakingDatabaseQuery);
+            res.sendStatus(500);
+        } else {
+            res.sendStatus(200);
+        }
+    });
+});
 
 module.exports = router;

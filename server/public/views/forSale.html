@@ -5,6 +5,27 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-sm-6 input-item">
+            <h3>Add a Property</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 input-item">
+            <input type="text" placeholder="Cost" ng-model="vm.newListing.cost">
+        </div>
+        <div class="col-sm-3 input-item">
+            <input type="text" placeholder="Square Footage" ng-model="vm.newListing.sqft">
+        </div>
+        <div class="col-sm-3 input-item">
+            <input type="text" placeholder="City" ng-model="vm.newListing.city">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 input-item">
+            <button class="btn btn-primary" ng-click="vm.addNewListing(vm.newListing)">Submit</button>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-xs-12">
             <table class="table">
                 <thead>
