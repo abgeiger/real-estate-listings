@@ -12,3 +12,9 @@ a {
 .input-item {
     margin: 5px;
 }
+
+.home-content {
+    border-radius: 7px;
+    background-color: skyblue;
+    color: white;
+}
