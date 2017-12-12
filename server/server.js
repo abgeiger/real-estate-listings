@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 
-var mongooseConnection = require('./modules/mongoose-connection');
+require('./modules/mongoose-connection'); // no longer equal to mongooseConnection; changed for deployment
 var forRent = require('./routes/forRent.js');
 var forSale = require('./routes/forSale.js');
 
@@ -12,8 +12,8 @@ var app = express();
 app.use(bodyParser.json());
 app.use(express.static('server/public'));
 
-// database connection
-mongooseConnection.connect();
+// database connection; commented out when we changed for deployment
+// mongooseConnection.connect();
 
 app.use('/forRent', forRent);
 app.use('/forSale', forSale);
